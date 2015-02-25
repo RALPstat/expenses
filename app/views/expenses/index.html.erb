@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mis Finanzas</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Concepto</th>
+      <th>Monto</th>
+      <th>Categoría</th>
+      <th colspan="3">Opciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expenses.each do |expense| %>
+      <tr>
+        <td><%= expense.fecha %></td>
+        <td><%= expense.concept %></td>
+        <td><%= expense.amount %></td>
+        <td><%= expense.category.name %></td>
+        <td><%= link_to 'Ver', expense %></td>
+        <td><%= link_to 'Editar', edit_expense_path(expense) %></td>
+        <td><%= link_to 'Eliminar', expense, method: :delete, data: { confirm: 'No se puede deshacer esta acción, ¿Está usted seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo gasto', new_expense_path %>
