@@ -1,28 +1,25 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+= Mis Gastos
+
+El objetivo de este challenge es practicar las asociaciones belongs_to y has_many. Para esto vamos a crear una aplicación que nos va a permitir administrar nuestros gastos personales.
+
+== Instrucciones
+
+1. Crea una aplicación llamada expenses.
+2. Usando el generador de Rails, crea los siguientes modelos:
+
+=== - Category
+
+* name
+
+=== - Expense
+
+* category
+* fecha
+* concept
+* amount
+
+3. Crea un controlador para administrar los gastos (expenses_controller). Debe ser posible listar, crear, editar y eliminar gastos.
+4. La ruta principal de la aplicación (http://localhost:3000/) debe mostrar la lista de gastos. Utiliza Bootstrap en la vista.
+5. Publica tu solución en Github.
